@@ -25,24 +25,6 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 // mail($to,$email_subject,$email_body,$headers);
 // return true; 
 
-// using SendGrid's PHP Library
-// https://github.com/sendgrid/sendgrid-php
 
-// If you are using Composer
-//require 'vendor/autoload.php';
-// If you are not using Composer (recommended)
-require("sendgrid-php/sendgrid-php.php");
-
-$from = new SendGrid\Email("Example User", $email_address);
-$subject = "Sending with SendGrid is Fun";
-$to = new SendGrid\Email("Example User", "antoinebe35@gmail.com");
-$content = new SendGrid\Content($message);
-$mail = new SendGrid\Mail($from, $subject, $to, $content);
-$apiKey = getenv('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');
-$sg = new \SendGrid($apiKey);
-$response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
 
 ?>
