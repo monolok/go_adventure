@@ -29,9 +29,10 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 // https://github.com/sendgrid/sendgrid-php
 
 // If you are using Composer
-require 'vendor/autoload.php';
+//require 'vendor/autoload.php';
 // If you are not using Composer (recommended)
-// require("path/to/sendgrid-php/sendgrid-php.php");
+require("path/to/sendgrid-php/sendgrid-php.php");
+
 $from = new SendGrid\Email("Example User", $email_address);
 $subject = "Sending with SendGrid is Fun";
 $to = new SendGrid\Email("Example User", "antoinebe35@gmail.com");
