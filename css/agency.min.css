@@ -22,10 +22,19 @@
 
 .inherit {
 	margin: inherit;
+	text-align: center;
 }
 
 .margin-bot {
 	margin-bottom: 25px;
+}
+
+#social {
+	padding-bottom: 30px;
+}
+
+#instalink {
+	text-decoration: none;
 }
 
 /*finish*/
